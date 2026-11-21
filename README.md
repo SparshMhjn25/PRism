@@ -1,31 +1,58 @@
-## 🧠 How PRism Will Work
+# PRism – AI-Powered GitHub Code Review App
 
-PRism aims to combine Large Language Models (LLMs) with Retrieval-Augmented Generation (RAG) to provide context-aware code reviews.
+PRism is a GitHub App that automates Pull Request (PR) code reviews using Large Language Models (LLMs). It analyzes code changes, identifies potential issues, and publishes actionable feedback directly on GitHub Pull Requests.
 
-The planned workflow is:
+The long-term goal is to integrate Retrieval-Augmented Generation (RAG) to enable codebase-aware reviews, allowing PRism to understand how changed code interacts with the existing codebase rather than reviewing modifications in isolation.
 
-1. Pull Request Analysis: Retrieve the changes introduced by a GitHub Pull Request.
-2. Context Retrieval (RAG): Retrieve relevant code and supporting context from the codebase to help the reviewer understand how the changed code relates to the rest of the project.
-3. AI-Powered Review:Use the retrieved context alongside the Pull Request diff to identify potential bugs, security vulnerabilities, performance issues, and architectural concerns.
-4. Actionable Feedback: Present findings with explanations, severity levels, and suggestions for improvement.
-5. GitHub Integration: Publish review feedback directly on the Pull Request and maintain a history of previous reviews.
+## 🧠 How PRism Works
 
-RAG is intended to help PRism go beyond reviewing changed lines in isolation by grounding its analysis in relevant parts of the existing codebase.
+The planned workflow combines LLMs with RAG to deliver context-aware code reviews.
+
+1. **Pull Request Analysis:** Retrieve and analyze the changes introduced by a GitHub Pull Request.
+2. **Context Retrieval (RAG):** Retrieve relevant code and supporting context from the existing codebase.
+3. **AI-Powered Review:** Analyze the PR diff alongside retrieved context to identify potential bugs, security vulnerabilities, performance issues, and architectural concerns.
+4. **Actionable Feedback:** Generate findings with explanations, severity levels, and improvement suggestions.
+5. **GitHub Integration:** Publish review feedback directly on Pull Requests and maintain review history.
+
+RAG is planned for a future version and is intended to help PRism move beyond reviewing changed lines in isolation.
 
 ## 🛠️ Tech Stack
 
-Current development
+**Current Implementation**
 - TypeScript
 - Node.js
 - Express.js
 - PostgreSQL
+- React
+- GitHub Apps & Webhooks
+- LLM API Integration
 
-Planned
-- GitHub API and webhooks
-- LLM integration
+**Planned**
 - Retrieval-Augmented Generation (RAG)
-- Code retrieval and indexing pipeline
+- Codebase indexing and retrieval pipeline
+- Context-aware code analysis
+
+## ⚙️ Implemented Features
+
+- Automated PR review workflow triggered by GitHub webhooks.
+- LLM-powered analysis of Pull Request changes.
+- Structured review findings with severity levels and suggestions.
+- PostgreSQL persistence for repositories, Pull Requests, reviews, and findings.
+- Webhook signature verification and idempotent event processing.
+- GitHub integration for publishing review feedback.
+- React dashboard for review history, findings, and repository management.
+- Light and dark theme support.
 
 ## 🚧 Development Status
 
-PRism is under active development. The backend foundation and initial database-backed repository endpoints are implemented. GitHub integration, LLM-powered reviews, and the RAG pipeline are planned for subsequent development stages.
+PRism is actively under development.
+
+The initial review engine, GitHub webhook integration, database-backed review pipeline, and dashboard are implemented.
+
+Current development focuses on GitHub OAuth authentication, multi-user support, repository installation ownership, and Bring Your Own Key (BYOK) configuration.
+
+RAG-based codebase retrieval is planned for V2.
+
+## 🎯 Project Vision
+
+To build an intelligent GitHub code review assistant that understands not just the code being changed, but also the broader codebase, enabling more accurate, relevant, and context-aware feedback.

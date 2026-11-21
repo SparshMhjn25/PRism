@@ -1,0 +1,62 @@
+
+:root {
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  color-scheme: light;
+
+  /* Light Theme */
+  --page-bg: #f8f8ff;
+  --card-bg: #ffffff;
+  --text-primary: #292044;
+  --text-secondary: #786f89;
+  --border-color: #e9e5f0;
+  --table-header-bg: #f7f5fb;
+  --hover-bg: #faf9fd;
+
+  color: var(--text-primary);
+  background: var(--page-bg);
+}
+
+/* Dark Theme */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --page-bg: #11111d;
+  --card-bg: #1c1b2b;
+  --text-primary: #f1effa;
+  --text-secondary: #aaa3bd;
+  --border-color: #343147;
+  --table-header-bg: #252337;
+  --hover-bg: #29263d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+html {
+  background: var(--page-bg);
+  color: var(--text-primary);
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#root {
+  min-height: 100vh;
+}

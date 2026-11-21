@@ -37,5 +37,10 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "exclude": [
+    "src/testGithubPR.ts",
+    "src/testLLM.ts",
+    "src/testReviewWorkflow.ts"
+  ]
 }
